@@ -11,5 +11,7 @@ class Main {
         var generate = Stream.generate(() -> "Hello");
         boolean b = generate.allMatch(w -> w.length() == 5);
         System.out.println(b);
+        System.out.println(b);
+
     }
 }
