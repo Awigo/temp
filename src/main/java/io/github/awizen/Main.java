@@ -1,17 +1,14 @@
 package io.github.awizen;
 
-import java.io.Serializable;
-import java.math.BigInteger;
-import java.util.stream.Stream;
+import java.util.Arrays;
+import java.util.Optional;
 
 class Main {
     public static void main(String[] args) {
-        Stream<String> stringStream = Stream.of("ala", "ma", "kota");
-        var build = Stream.<String>builder().build();
-        var generate = Stream.generate(() -> "Hello");
-        boolean b = generate.allMatch(w -> w.length() == 5);
-        System.out.println(b);
-        System.out.println(b);
-
+        Optional<String> empty = Optional.empty();
+        Optional<String> ala = Optional.of("ala");
+        System.out.println(empty.isEmpty());
+        empty = ala;
+        System.out.println(empty.isEmpty());
     }
 }
